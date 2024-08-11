@@ -9,11 +9,11 @@ class OpenAIAPI {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: "gpt-3.5-turbo-1106",
+        model: "gpt-4o-mini",
         messages: conversationHistory.concat([
           { role: "user", content: userMessage },
         ]),
-        max_tokens: 150,
+        max_tokens: 350,
       }),
     });
     const responseData = await response.json();
